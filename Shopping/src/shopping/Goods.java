@@ -19,6 +19,19 @@ public class Goods {
     
     
  
+   public void mostexpensiveStuff(Goods [] goods){
+       
+       
+       double max =goods[0].getPrice();
+       
+       for (int i = 0; i < goods.length ; i++) {
+           if (max < goods[i].getPrice()) {
+               max = goods[i].getPrice();
+           }
+       }
+       System.out.println(max);
+ 
+   }
     
     
     
@@ -31,6 +44,11 @@ public class Goods {
         this.shelflife = shelflife;
     }
 
+    public Goods() {
+    }
+
+    
+    
     public double  getShelflife() {
         return shelflife;
     }

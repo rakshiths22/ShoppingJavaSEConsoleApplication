@@ -14,44 +14,50 @@ import java.util.Scanner;
 public class Run {
 
     // print out the created goods
-    public static void getGoodsInfo(Goods[] array) {
+    public static void getGoodsInfo(Goods[] goods) {
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i].getName() + " costs  " + array[i].getPrice() + "  and the selflife is 2017." + array[i].getShelflife());
+        for (int i = 0; i < goods.length; i++) {
+            System.out.println(goods[i].getName() + " costs  " + goods[i].getPrice() + "  and the selflife is 2017." + goods[i].getShelflife());
             System.out.println("");
         }
         
         
-       // get the most expensive food
-        double  max = array[0].getPrice();  
-        for (int i = 0; i < array.length; i++) {
-   
-            if (max < array[i].getPrice()) {
-                max = array[i].getPrice();
-               System.out.println("The most expensive food is "+ array[i].getName() + " it is cost "+ array[i].getPrice());
-            }
-            
-           
-        }
-        
-        
-        
-        
+      double max =goods[0].getPrice();
+       
+       for (int i = 0; i < goods.length ; i++) {
+           if (max < goods[i].getPrice()) {
+               max = goods[i].getPrice();
+           }
+       }
+       System.out.println("Tos most expensive good is  "+ max);
+ 
+   }
+ 
+       
 
-    }
-
-    // print out the created buyers'name 
-    public static void getBuyersName(Buyer[] buyer) {
+    
+    public static void getBuyersInfo(Buyer[] buyer) {
 
         for (int i = 0; i < buyer.length; i++) {
             System.out.println("The names of the buyers are  : ");
             System.out.print(buyer[i].getName() + "\t");
 
         }
+        
+        
+        int max = buyer[0].creditplanace;
+        
+        for (int i = 0; i < buyer.length; i++) {
+            if (buyer[i].creditplanace>max) {
+                max =buyer[i].creditplanace;
+                System.out.println(" The " +buyer[i].getName() + " has the most amount of money  he or she has  "+buyer[i].creditplanace);
+            }
+        }
+        
+        
 
     }
     // print out the created worker's name 
-
     public static void getEmployeesName(Employees[] e) {
         System.out.println("The names of the workers are  : ");
         for (int i = 0; i < e.length; i++) {
@@ -114,36 +120,37 @@ public class Run {
         }
         
         getGoodsInfo(goods);
+       
         
         
-//        System.out.println("How many buyer are there  ? ");
-//     
-//        int numOfBuyers = sc.nextInt();
-//        Buyer [] buyers = new Buyer[numOfBuyers];
-//        
-//        for (int i = 0; i < buyers.length; i++) {
-//            sc.nextLine();
-//            System.out.println("Type in the "+(i+1) +" buyer's  name ");
-//            String name = sc.nextLine();
-//            
-//            System.out.println("Type in how much money the "  +(i+1) +  " buyer has ");
-//            int moneyOfBuyer = sc.nextInt();
-//            
-//            buyers[i] = new Buyer(name, moneyOfBuyer);
-//            
-//            
-//        }
-//        
-//        
-//        getBuyersName(buyers);
-//        
-//        
-//        for (int i = 0; i < buyers.length; i++) {
-//            
-//            buyers[i].shopping(goods);
-//            buyers[i].kiir();
-//            
-//        }
+        System.out.println("How many buyers are there  ? ");
+     
+        int numOfBuyers = sc.nextInt();
+        Buyer [] buyers = new Buyer[numOfBuyers];
+        
+        for (int i = 0; i < buyers.length; i++) {
+            sc.nextLine();
+            System.out.println("Type in the "+(i+1) +" buyer's  name ");
+            String name = sc.nextLine();
+            
+            System.out.println("Type in how much money the "  +(i+1) +  " buyer has ");
+            int moneyOfBuyer = sc.nextInt();
+            
+            buyers[i] = new Buyer(name, moneyOfBuyer);
+            
+            
+        }
+        
+        
+        getBuyersInfo(buyers);
+        
+        
+        for (int i = 0; i < buyers.length; i++) {
+            
+            buyers[i].shopping(goods);
+            buyers[i].kiir();
+            
+        }
 //        
 //        
 //        
