@@ -16,20 +16,23 @@ public class Goods {
     private double  shelflife;
     
     
+   
     
-    
- 
-    
-    
-    
-    
-    
-
     public Goods(String name, int price, double  shelflife) {
         this.name = name;
         this.price = price;
         this.shelflife = shelflife;
+   
     }
+
+    public Goods(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+    
+      public Goods() {
+    }
+    
 
     public double  getShelflife() {
         return shelflife;

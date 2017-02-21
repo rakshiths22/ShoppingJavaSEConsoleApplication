@@ -14,12 +14,22 @@ import java.util.Scanner;
 public class Run {
 
     // print out the created goods
-    public static void getGoods(Goods[] array) {
+    public static void getGoodsInfo (Goods[] array) {
 
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i].getName() + " costs  " + array[i].getPrice() + "  and the selflife is 2017." + array[i].getShelflife());
+            System.out.println(array[i].getName() + " costs  " + array[i].getPrice() + "  and the selflife is 2017." );
             System.out.println("");
         }
+        
+        
+        double max = array[0].getPrice();
+        
+        for (Goods goods : array) {
+            if (goods.getPrice()>max) {
+                max = goods.getPrice();
+            }
+        }
+        System.out.println("The most expensive good cost "+ max );
 
     }
 
@@ -71,65 +81,60 @@ public class Run {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-//        System.out.println("How many goods you want to create ?");
-//        
-//        int numOfGoods = sc.nextInt();
-//        
-//        Goods []goods = new Goods [numOfGoods];
-//        
-//        for (int i = 0; i < goods.length; i++) {
-//            
-//       
-//         
-//        sc.nextLine();
-//        System.out.println("what is the name of the "+ (i+1)+ ". product?");
-//        String name = sc.nextLine();
-//        
-//        System.out.println("What is the price of the  "+ (i+1)+ " . product?");
-//        int price = sc.nextInt();
-//        
-//        
-//        System.out.println("What is the selflife of the "+ (i+1)+ " . product? ");
-//        double selflife = sc.nextDouble();
-//        
-//        goods[i] = new Goods(name,price,selflife);
-//        
-//        }
-//        
-//        getGoods(goods);
-//        
-//        
-//        System.out.println("How many buyer are there  ? ");
-//     
-//        int numOfBuyers = sc.nextInt();
-//        Buyer [] buyers = new Buyer[numOfBuyers];
-//        
-//        for (int i = 0; i < buyers.length; i++) {
-//            sc.nextLine();
-//            System.out.println("Type in the "+(i+1) +" buyer's  name ");
-//            String name = sc.nextLine();
-//            
-//            System.out.println("Type in how much money the "  +(i+1) +  " buyer has ");
-//            int moneyOfBuyer = sc.nextInt();
-//            
-//            buyers[i] = new Buyer(name, moneyOfBuyer);
-//            
-//            
-//        }
-//        
-//        
-//        getBuyersName(buyers);
-//        
-//        
-//        for (int i = 0; i < buyers.length; i++) {
-//            
-//            buyers[i].shopping(goods);
-//            buyers[i].kiir();
-//            
-//        }
-//        
-//        
-//        
+        System.out.println("How many goods you want to create ?");
+        
+        int numOfGoods = sc.nextInt();
+        
+        Goods []goods = new Goods [numOfGoods];
+        
+        for (int i = 0; i < goods.length; i++) {
+            
+       
+         
+        sc.nextLine();
+        System.out.println("what is the name of the "+ (i+1)+ ". product?");
+        String name = sc.nextLine();
+        
+        System.out.println("What is the price of the  "+ (i+1)+ " . product?");
+        int price = sc.nextInt();
+        goods[i] = new Goods(name,price);
+        
+        }
+        
+        getGoodsInfo(goods);
+        
+        
+        System.out.println("How many buyer are there  ? ");
+     
+        int numOfBuyers = sc.nextInt();
+        Buyer [] buyers = new Buyer[numOfBuyers];
+        
+        for (int i = 0; i < buyers.length; i++) {
+            sc.nextLine();
+            System.out.println("Type in the "+(i+1) +" buyer's  name ");
+            String name = sc.nextLine();
+            
+            System.out.println("Type in how much money the "  +(i+1) +  " buyer has ");
+            int moneyOfBuyer = sc.nextInt();
+            
+            buyers[i] = new Buyer(name, moneyOfBuyer);
+            
+            
+        }
+        
+        
+        getBuyersName(buyers);
+        
+        
+        for (int i = 0; i < buyers.length; i++) {
+            
+            buyers[i].shopping(goods);
+            buyers[i].kiir();
+            
+        }
+        
+        
+        
         
         System.out.println("");
         
@@ -149,7 +154,7 @@ public class Run {
         }
         
         setwokinghours(employeesArray);
-        //getEmployeesName(employeesArray);
+        getEmployeesName(employeesArray);
        
         
         System.out.println("What is the name the boss of the shop");
@@ -164,15 +169,7 @@ public class Run {
        
 
         
-        
 
-
-//        System.out.println("");
-//        Boss.calculatingSalary(e1);
-//        Boss.bosPrintOutSalary(e1);
-//        System.out.println("");
-//        Boss.calculatingSalary(e2);
-//        Boss.bosPrintOutSalary(e2);
     }
 
 }
