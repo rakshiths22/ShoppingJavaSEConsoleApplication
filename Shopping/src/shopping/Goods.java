@@ -12,27 +12,36 @@ package shopping;
 public class Goods {
     
     private String name;
-    private int price;
+    private double price;
     private double  shelflife;
     
     
     
     
  
-   public void mostexpensiveStuff(Goods [] goods){
-       
-       
-       double max =goods[0].getPrice();
-       
-       for (int i = 0; i < goods.length ; i++) {
-           if (max < goods[i].getPrice()) {
-               max = goods[i].getPrice();
-           }
-       }
-       System.out.println(max);
+ public Goods selectMostExpensive (Goods [] goods){
+
+     double max = goods[0].getPrice();
+             
+     for (int i = 0; i < goods.length; i++) {
+         if (goods[i].price>max) {
+             max=goods[i].price;
+         }
+     }
+     Goods expensive = new Goods(max);
+   
+     return expensive;
+ }
+    public Goods(double price) {
+        this.price = price;
+    }
  
-   }
-    
+ 
+
+    public Goods(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
     
     
     
