@@ -14,12 +14,29 @@ import java.util.Scanner;
 public class Run {
 
     // print out the created goods
-    public static void getGoods(Goods[] array) {
+    public static void getGoodsInfo(Goods[] array) {
 
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].getName() + " costs  " + array[i].getPrice() + "  and the selflife is 2017." + array[i].getShelflife());
             System.out.println("");
         }
+        
+        
+       // get the most expensive food
+        double  max = array[0].getPrice();  
+        for (int i = 0; i < array.length; i++) {
+   
+            if (max < array[i].getPrice()) {
+                max = array[i].getPrice();
+               System.out.println("The most expensive food is "+ array[i].getName() + " it is cost "+ array[i].getPrice());
+            }
+            
+           
+        }
+        
+        
+        
+        
 
     }
 
@@ -71,34 +88,34 @@ public class Run {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-//        System.out.println("How many goods you want to create ?");
-//        
-//        int numOfGoods = sc.nextInt();
-//        
-//        Goods []goods = new Goods [numOfGoods];
-//        
-//        for (int i = 0; i < goods.length; i++) {
-//            
-//       
-//         
-//        sc.nextLine();
-//        System.out.println("what is the name of the "+ (i+1)+ ". product?");
-//        String name = sc.nextLine();
-//        
-//        System.out.println("What is the price of the  "+ (i+1)+ " . product?");
-//        int price = sc.nextInt();
-//        
-//        
-//        System.out.println("What is the selflife of the "+ (i+1)+ " . product? ");
-//        double selflife = sc.nextDouble();
-//        
-//        goods[i] = new Goods(name,price,selflife);
-//        
-//        }
-//        
-//        getGoods(goods);
-//        
-//        
+        System.out.println("How many goods you want to create ?");
+        
+        int numOfGoods = sc.nextInt();
+        
+        Goods []goods = new Goods [numOfGoods];
+        
+        for (int i = 0; i < goods.length; i++) {
+            
+       
+         
+        sc.nextLine();
+        System.out.println("what is the name of the "+ (i+1)+ ". product?");
+        String name = sc.nextLine();
+        
+        System.out.println("What is the price of the  "+ (i+1)+ " . product?");
+        int price = sc.nextInt();
+        
+        
+        System.out.println("What is the selflife of the "+ (i+1)+ " . product? ");
+        double selflife = sc.nextDouble();
+        
+        goods[i] = new Goods(name,price,selflife);
+        
+        }
+        
+        getGoodsInfo(goods);
+        
+        
 //        System.out.println("How many buyer are there  ? ");
 //     
 //        int numOfBuyers = sc.nextInt();
@@ -130,41 +147,41 @@ public class Run {
 //        
 //        
 //        
-        
-        System.out.println("");
-        
-        System.out.println("How many workers are there in the shop ?  ?");
-        int numOfWorkers = sc.nextInt();
-        sc.nextLine();
-
-        Employees[] employeesArray = new Employees[numOfWorkers];
-
-        for (int i = 0; i < numOfWorkers; i++) {
-
-            System.out.println("Type in the " + (i + 1) + " worker's  name ");
-
-            String name = sc.nextLine();
-
-            employeesArray[i] = new Employees(name);
-        }
-        
-        setwokinghours(employeesArray);
-        //getEmployeesName(employeesArray);
-       
-        
-        System.out.println("What is the name the boss of the shop");
-        String name = sc.nextLine();
-        Boss boss = new Boss(name);
-        
-        
-   
-        boss.calculatingSalary(employeesArray);
-        
-        employeesInfo(employeesArray);
-       
-
-        
-        
+//        
+//        System.out.println("");
+//        
+//        System.out.println("How many workers are there in the shop ?  ?");
+//        int numOfWorkers = sc.nextInt();
+//        sc.nextLine();
+//
+//        Employees[] employeesArray = new Employees[numOfWorkers];
+//
+//        for (int i = 0; i < numOfWorkers; i++) {
+//
+//            System.out.println("Type in the " + (i + 1) + " worker's  name ");
+//
+//            String name = sc.nextLine();
+//
+//            employeesArray[i] = new Employees(name);
+//        }
+//        
+//        setwokinghours(employeesArray);
+//        //getEmployeesName(employeesArray);
+//       
+//        
+//        System.out.println("What is the name the boss of the shop");
+//        String name = sc.nextLine();
+//        Boss boss = new Boss(name);
+//        
+//        
+//   
+//        boss.calculatingSalary(employeesArray);
+//        
+//        employeesInfo(employeesArray);
+//       
+//
+//        
+//        
 
 
 //        System.out.println("");
