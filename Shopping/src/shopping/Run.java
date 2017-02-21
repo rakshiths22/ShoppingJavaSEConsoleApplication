@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author joci
  */
-public class Shopping {
+public class Run {
 
     // print out the created goods
     public static void getGoods(Goods[] array) {
