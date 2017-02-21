@@ -20,22 +20,22 @@ public class Run {
             System.out.println(goods[i].getName() + " costs  " + goods[i].getPrice() + "  and the selflife is 2017." + goods[i].getShelflife());
             System.out.println("");
         }
+        
+        double max  = goods[0].getPrice();
+        
+        for (int i = 0; i < goods.length; i++) {
+            if (max<goods[i].getPrice()) {
+                max=goods[i].getPrice();
+            }
+        }
+        System.out.println("The most expensive product cost " + max );
     }
     
     
-     public Goods selectMostExpensive (Goods [] goods){
+    
 
-     double max = goods[0].getPrice();
-             
-     for (int i = 0; i < goods.length; i++) {
-         if (goods[i].getPrice()>max) {
-             max=goods[i].getPrice();
-         }
-     }
-     Goods expensive = new Goods(max);
-   
-     return expensive;
- }
+    
+ 
     
 
     
