@@ -23,13 +23,17 @@ public class Run {
         
         
         double max = array[0].getPrice();
+        int indexOfMaxValue = 0;
+        for (int i = 0; i < array.length; i++) {
         
-        for (Goods goods : array) {
-            if (goods.getPrice()>max) {
-                max = goods.getPrice();
+            if (array[i].getPrice()>max) {
+                max = array[i].getPrice();
+                indexOfMaxValue = i;
             }
         }
-        System.out.println("The most expensive good cost "+ max );
+        Goods mostExpensivePointer = array[indexOfMaxValue];
+        
+        System.out.println(mostExpensivePointer.getName() +  " is  most expensive product and its  cost "+ max );
 
     }
 
