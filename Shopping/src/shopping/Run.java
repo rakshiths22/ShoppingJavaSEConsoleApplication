@@ -51,6 +51,7 @@ public class Run {
 
     public static void getEmployeesName(Employees[] e) {
         System.out.println("The names of the workers are  : ");
+        System.out.println("");
         for (int i = 0; i < e.length; i++) {
             System.out.print(e[i].getName() + "\t");
         }
@@ -68,14 +69,7 @@ public class Run {
           
     }
       
-      public static void employeesInfo(Employees[] employees){
-          
-          for (int i = 0; i < employees.length; i++) {
-              System.out.println(employees[i].getName()+ "name workers has " +employees[i].getSalary() +" amount of salary in this month ");
-          }
-          
-      }
-      
+     
       
       
       
@@ -127,15 +121,8 @@ public class Run {
         }
         
         
-        getBuyersName(buyers);
-        
-        
-        for (int i = 0; i < buyers.length; i++) {
-            
-            buyers[i].shopping(goods);
-            buyers[i].kiir();
-            
-        }
+
+
         
         
         
@@ -159,17 +146,20 @@ public class Run {
         
         setwokinghours(employeesArray);
         getEmployeesName(employeesArray);
-       
         
+       
+        System.out.println("");
         System.out.println("What is the name the boss of the shop");
         String name = sc.nextLine();
         Boss boss = new Boss(name);
+        
+  
         
         
    
         boss.calculatingSalary(employeesArray);
         
-        employeesInfo(employeesArray);
+      
        
 
         

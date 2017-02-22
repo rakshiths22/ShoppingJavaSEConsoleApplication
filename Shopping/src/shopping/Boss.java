@@ -18,17 +18,32 @@ public class Boss {
         this.name = name;
     }
 
-    public void   calculatingSalary(Employees[] employees) {
+    public void  calculatingSalary (Employees[] employees) {
+        
+        
         
         
         for (int i = 0; i < employees.length; i++) {
             
-            employees[i].setSalary(employees[i].getMoneyPerHour()*employees[i].getWorkingHours());
-           
+            double salary = 0;
+            
+             salary = employees[i].getMoneyPerHour()*employees[i].getWorkingHours();
+            
+            System.out.println(employees[i].getName()+ " worker's salary is " +salary);
         }
+               
+     
 
-      
+    }
 
+    public void calculatingSalary( Employees emoloyee){
+        
+        double salary = emoloyee.getMoneyPerHour()*emoloyee.getWorkingHours();
+        
+         emoloyee.setSalary(salary);
+                 
+        
+        
     }
     
 //    public void bosPrintOutSalary(Employees e){
