@@ -26,6 +26,9 @@ public class Employees {
     public Employees(double workingHours) {
         this.workingHours = workingHours;
     }
+
+    public Employees() {
+    }
     
     
     

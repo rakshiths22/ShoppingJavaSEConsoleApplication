@@ -28,6 +28,8 @@ public class Boss {
             double salary = 0;
             
              salary = employees[i].getMoneyPerHour()*employees[i].getWorkingHours();
+             
+             employees[i].setSalary(salary);
             
             System.out.println(employees[i].getName()+ " worker's salary is " +salary);
         }

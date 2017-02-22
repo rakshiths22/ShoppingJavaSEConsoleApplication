@@ -69,11 +69,6 @@ public class Run {
           
     }
       
-     
-      
-      
-      
-      
       
 
     public static void main(String[] args) {
@@ -119,13 +114,7 @@ public class Run {
             
             
         }
-        
-        
-
-
-        
-        
-        
+     
         
         System.out.println("");
         
@@ -144,6 +133,8 @@ public class Run {
             employeesArray[i] = new Employees(name);
         }
         
+        
+        
         setwokinghours(employeesArray);
         getEmployeesName(employeesArray);
         
@@ -158,12 +149,39 @@ public class Run {
         
    
         boss.calculatingSalary(employeesArray);
-        
+        workerWhoEarnedTheMost(employeesArray);
       
-       
+      
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
+    private static void workerWhoEarnedTheMost(Employees[] employeesArray) {
+     
+        Employees e = new Employees();
+         double max = employeesArray[0].getSalary();    
+        for (int i = 0; i < employeesArray.length; i++) {
+
+            if ( employeesArray[i].getSalary()>max) {
+                max = employeesArray[i].getSalary();
+                e = employeesArray[i];
+            }
+        }
+        System.out.println(e.getName()+ " employee have has the highest salary with "+ max );
         
-
     }
 
 }
