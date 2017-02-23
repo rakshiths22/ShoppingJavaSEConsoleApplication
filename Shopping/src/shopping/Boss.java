@@ -31,7 +31,7 @@ public class Boss {
              
              employees[i].setSalary(salary);
             
-            System.out.println(employees[i].getName()+ " worker's salary is " +salary);
+           // System.out.println(employees[i].getName()+ " worker's salary is " +salary);
         }
                
      

@@ -12,7 +12,42 @@ public class Employees {
     private double workingHours;
     private int age;
     private double salary;
-    private double moneyPerHour = 900 ;
+    private double moneyPerHour  ;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public  Employees loan (Employees empployee){
+        
+        double load = this.salary - empployee.getSalary();
+        
+        Employees loan = new Employees(load);
+        
+        return loan;
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      public Employees(double salary) {
+        this.salary = salary;
+    }
+    
     
     
     
@@ -21,17 +56,16 @@ public class Employees {
         
         System.out.println(getName()+ " worker's salary is  " +getSalary() );
         
-    }
-
-    public Employees(double workingHours) {
-        this.workingHours = workingHours;
-    }
+        
+     }
+//
+//    public Employees(double workingHours) {
+//        this.workingHours = workingHours;
+//    }
 
     public Employees() {
     }
-    
-    
-    
+      
 
     public Employees(String name, double workingHours) {
         this.name = name;
@@ -42,6 +76,30 @@ public class Employees {
         this.name = name;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public String getName() {
         return name;
     }
@@ -72,6 +130,11 @@ public class Employees {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+    
+    
+      public void setMoneyPerHour(double moneyPerHour) {
+        this.moneyPerHour = moneyPerHour;
     }
 
     public double getMoneyPerHour() {
