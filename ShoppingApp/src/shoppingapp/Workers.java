@@ -18,6 +18,26 @@ public class Workers {
     private String email;
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    public void data(){
+        System.out.println("");
+        System.out.println(getName() + " has workerd "+getWorkingHours()+ " hours and his or her salary is "+getSalary());
+        
+    }
+    
+    
+    
+    
+    
+    
+    
 
     public Workers() {
     }
@@ -67,12 +87,7 @@ public class Workers {
         this.email = email;
     }
     
-    
-    
-    
-    
-    
-    
+
     
     
 }
