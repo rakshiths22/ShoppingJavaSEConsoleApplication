@@ -145,8 +145,9 @@ public class Run {
         double earn = sc.nextDouble();
         
         
-        for (int i = 0; i < employeesArray.length; i++) {
-            employeesArray[i].setMoneyPerHour(earn);
+
+            for (Employees employees : employeesArray) {
+            employees.setMoneyPerHour(earn);
         }
         
 
