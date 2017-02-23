@@ -48,6 +48,7 @@ public class ShoppingApp {
         
         for (Workers workers : workersList) {
             workers.data();
+            workers.data(workersList);
         }
         
         

@@ -17,20 +17,30 @@ public class Workers {
     private double workingHours;
     private String email;
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // workers salary and their name 
     public void data(){
         System.out.println("");
         System.out.println(getName() + " has workerd "+getWorkingHours()+ " hours and his or her salary is "+getSalary());
         
     }
+    
+    // which workers worked the most 
+     public void data(Workers [] array){
+         
+         Workers workerWithMostWorkingHour = new Workers();
+         
+         double  max = array[0].workingHours;
+         for (int i = 0; i < array.length; i++) {
+             if (array[i].workingHours> max) {
+                 max = array[i].workingHours;
+                 workerWithMostWorkingHour = array[i];
+             }
+         }
+         System.out.println("");
+         System.out.println(workerWithMostWorkingHour.getName()+" has worked the most he or she earned "+ max);
+     }
+    
+    
     
     
     
